@@ -1,0 +1,117 @@
+.ffzz{
+    width: 100%;
+    padding: 40px 0 76px 0;
+    height: 439px;
+    .neirong{
+        width: 1171px;
+        margin: auto;
+        height: 100%;
+       
+        .ffzz_title{
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 45px;
+            font-family: "思源黑体";
+            line-height: 1;
+            color: #000;
+        }
+        .bigbox{
+            display: flex;
+            .box{
+                width: 33.333333333333%;
+                height: 250px;
+                border-right: 1px solid #070708;
+                &:last-child{
+                    border-right: none;
+                }
+                .yuan{
+                    width: 124px;
+                    height: 124px;
+                    text-align: center;
+                    border: 2px solid #288f88;
+                    border-radius: 124px;
+                    position: relative;
+                    margin: 0 auto;
+                    span{
+                        display: inline-block;
+                        margin-top:35%;
+                        width: 100%;
+                        color: #288f88;
+                        font-size: 33px;
+                        font-family: "思源黑体";
+                        // position: absolute;
+                        // top: 50%;
+                        // left: 50%;
+                    }
+                    
+              
+              
+                }
+                p{
+                    font-size: 18px;
+                    line-height: 30px;
+                    padding: 0 30px 0 34px;
+                    margin-top: 38px;
+                    font-family: "思源黑体";
+                }
+                .yuan:hover{
+                    background-color:#288f88;
+                    span{
+                        color: #fff;
+                    }
+                }
+            }
+            
+        }
+
+    }
+}
+@media screen and (max-width: 768px){
+    .ffzz{
+        
+        padding: 40px 0 40px 0;
+      
+        .neirong{
+            width: 100%;
+            margin: auto;
+            height: 100%;
+           
+            .ffzz_title{
+                font-size: 22px;
+            }
+            .bigbox{
+                display: flex;
+                .box{
+                    width: 33.333333333333%;
+                    border: none;
+                    .yuan{
+                        width: 80px;
+                        height: 80px;
+                        text-align: center;    
+                        border-radius: 80px;
+                      
+                        span{
+                            
+                          font-size: 22px;
+                        
+                          
+                        }
+                        
+                  
+                  
+                    }
+                    p{
+                        font-size: 14px;
+                        line-height: 22px;
+                        padding: 0 10px 0 10px;
+                        margin-top: 18px;
+                        
+                    }
+                    
+                }
+                
+            }
+    
+        }
+    }
+}

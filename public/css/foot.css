@@ -1,0 +1,54 @@
+.foot {
+  width: 100%;
+  height: 243px;
+  padding: 76px 0 81px 0;
+  font-family: "思源黑体";
+}
+.foot .bigbox {
+  width: 1171px;
+  height: 86px;
+  margin: auto;
+}
+.foot .bigbox .box {
+  float: left;
+  margin: 0 6.5% 0 6.5%;
+  vertical-align: top;
+}
+.foot .bigbox .box span {
+  font-size: 59px;
+  color: #26938c;
+  font-weight: lighter;
+  line-height: 0.6;
+}
+.foot .bigbox .box .small {
+  font-size: 24px;
+}
+.foot .bigbox .box p {
+  font-size: 17px;
+  color: #717171;
+  font-weight: 5px;
+  margin-top: 25px;
+}
+@media screen and (max-width: 768px) {
+  .foot .bigbox {
+    height: 222px;
+    margin-left: 50px;
+    width: 483px;
+  }
+  .foot .bigbox .box {
+    float: left;
+    vertical-align: top;
+  }
+  .foot .bigbox .box span {
+    font-size: 42px;
+    color: #26938c;
+    font-weight: lighter;
+    line-height: 0.6;
+  }
+  .foot .bigbox .box p {
+    font-size: 16px;
+    font-weight: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

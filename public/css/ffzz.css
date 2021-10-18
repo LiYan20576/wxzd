@@ -1,0 +1,94 @@
+.ffzz {
+  width: 100%;
+  padding: 40px 0 76px 0;
+  height: 439px;
+}
+.ffzz .neirong {
+  width: 1171px;
+  margin: auto;
+  height: 100%;
+}
+.ffzz .neirong .ffzz_title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 45px;
+  font-family: "思源黑体";
+  line-height: 1;
+  color: #000;
+}
+.ffzz .neirong .bigbox {
+  display: flex;
+}
+.ffzz .neirong .bigbox .box {
+  width: 33.33333333%;
+  height: 250px;
+  border-right: 1px solid #070708;
+}
+.ffzz .neirong .bigbox .box:last-child {
+  border-right: none;
+}
+.ffzz .neirong .bigbox .box .yuan {
+  width: 124px;
+  height: 124px;
+  text-align: center;
+  border: 2px solid #288f88;
+  border-radius: 124px;
+  position: relative;
+  margin: 0 auto;
+}
+.ffzz .neirong .bigbox .box .yuan span {
+  display: inline-block;
+  margin-top: 35%;
+  width: 100%;
+  color: #288f88;
+  font-size: 33px;
+  font-family: "思源黑体";
+}
+.ffzz .neirong .bigbox .box p {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 0 30px 0 34px;
+  margin-top: 38px;
+  font-family: "思源黑体";
+}
+.ffzz .neirong .bigbox .box .yuan:hover {
+  background-color: #288f88;
+}
+.ffzz .neirong .bigbox .box .yuan:hover span {
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .ffzz {
+    padding: 40px 0 40px 0;
+  }
+  .ffzz .neirong {
+    width: 100%;
+    margin: auto;
+    height: 100%;
+  }
+  .ffzz .neirong .ffzz_title {
+    font-size: 22px;
+  }
+  .ffzz .neirong .bigbox {
+    display: flex;
+  }
+  .ffzz .neirong .bigbox .box {
+    width: 33.33333333%;
+    border: none;
+  }
+  .ffzz .neirong .bigbox .box .yuan {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    border-radius: 80px;
+  }
+  .ffzz .neirong .bigbox .box .yuan span {
+    font-size: 22px;
+  }
+  .ffzz .neirong .bigbox .box p {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 0 10px 0 10px;
+    margin-top: 18px;
+  }
+}

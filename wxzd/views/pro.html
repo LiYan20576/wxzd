@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <link rel="stylesheet" href="/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/02.css">
+      <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    {{include './header.html'}}
+
+    <section class="image">
+      <img src="/images/pc_nybanner3.jpg" class=" img-responsive hidden-sm hidden-xs hidden-md" alt="">
+      <img src="/images/pc_nybanner2.jpg" class=" img-responsive visible-sm visible-xs visible-md" style="width: 100%;" alt="">
+      
+    </section>
+  
+    <section class="path_bar">
+      <div class="position">
+            <span class="glyphicon glyphicon-home">></span>
+            <a href="http://localhost:8000/index">首页</a>
+            <span>></span>
+            <a>产品展示</a>
+            <span>></span>
+            <a>{{pro.name}}</a>
+      </div>
+    </section>
+
+    <section class="product">
+      <div class="img_big">
+        <img src="{{pro.picture}}"class=" img-responsive visible-md visible-sm visible-xs" alt="">
+      </div>
+      <div class="pro_info">
+        <div class="detail_tit">{{pro.name}}</div>
+        <div class="detail_con">
+        <p>{{pro.about}}</p>          
+        </div>
+      </div>
+      <div class="img_small">
+        <img src="{{pro.picture}}" class="hidden-md hidden-sm hidden-xs"alt="">
+      </div>
+      <div class="pro_tedian">
+        <div class="tedian_con">
+        	<p><strong>特点：</strong></p>
+        	<p>{{pro.characteristic}}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="product_about">
+      <div class="title"><span>相关产品</span></div>
+      <div class="container">
+        <div class="row">
+          {{each about}}
+          <div class="col-lg-4 col-md-6 col-xs-6">
+            <a href="/{{$value._id.toString()}}">
+              <img src="{{$value.picture}}"class='img-responsive' alt="">
+              <div class="pro_info">
+                <span>{{$value.name}}</span>
+              <p>{{$value.about}}</p>
+              </div>
+            </a>
+          </div>
+          {{/each}}
+         
+        </div>
+      </div>
+    </section>
+    {{include './footer.html'}}
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+    crossorigin="anonymous"></script>
+  <script src="./js/header.js"></script>
+</body>
+</html>

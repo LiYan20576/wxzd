@@ -1,0 +1,132 @@
+.rongyu {
+  height: 531px;
+  width: 100%;
+  position: relative;
+}
+.rongyu img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.rongyu .neirong {
+  width: 1171px;
+  margin: auto;
+  height: 442px;
+}
+.rongyu .neirong .title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 85px;
+  color: #FFF;
+  padding-top: 45px;
+  font-family: "思源黑体";
+}
+.rongyu .neirong .box {
+  position: relative;
+  width: 1171px;
+  height: 300px;
+}
+.rongyu .neirong .box .screen {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  width: 1171px;
+  height: 300px;
+  overflow: hidden;
+}
+.rongyu .neirong .box .screen ol {
+  position: absolute;
+  z-index: 10;
+  left: 500px;
+  bottom: 0;
+  list-style: none;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.rongyu .neirong .box .screen ol li {
+  float: left;
+  width: 13px;
+  height: 13px;
+  margin-left: 10px;
+  border-radius: 50%;
+  user-select: none;
+  background-color: #d2d2d2;
+  color: transparent;
+}
+.rongyu .neirong .box .screen ol .current {
+  width: 15px;
+  height: 15px;
+  background-color: #26938c;
+  border: 2px solid #ffffff;
+}
+.rongyu .neirong .box .screen #left {
+  position: absolute;
+  z-index: 10;
+  width: 35px;
+  height: 35px;
+  left: 0px;
+  top: 40%;
+  font-size: 20px;
+  padding: 5px;
+  padding-left: 9px;
+  color: white;
+  margin-top: -30px;
+  user-select: none;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.rongyu .neirong .box .screen #right {
+  position: absolute;
+  z-index: 10;
+  width: 35px;
+  height: 35px;
+  right: 0px;
+  top: 40%;
+  font-size: 20px;
+  padding: 5px;
+  padding-left: 9px;
+  color: white;
+  margin-top: -30px;
+  user-select: none;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.rongyu .neirong .box .screen ul {
+  width: 800%;
+  height: 100%;
+  list-style: none;
+  position: absolute;
+  left: 0px;
+}
+.rongyu .neirong .box .screen ul li {
+  float: left;
+  width: 323px;
+  height: 217px;
+  margin-left: 51px;
+}
+.rongyu .neirong .box .screen ul li img {
+  width: 315px;
+  height: 207px;
+}
+.rongyu .neirong .box .screen ul li .title {
+  margin-top: 200px;
+  margin-left: 75px;
+  padding: 23px 0;
+  font-size: 21px;
+  color: #FFF;
+}
+@media screen and (max-width: 768px) {
+  .rongyu .neirong .box .screen {
+    width: 482px;
+  }
+  .rongyu .neirong .box .screen ol {
+    left: 160px;
+  }
+  .rongyu .neirong .box .screen #right {
+    left: 445   px;
+  }
+  .rongyu .neirong .box .screen ul {
+    left: 40px;
+  }
+}
