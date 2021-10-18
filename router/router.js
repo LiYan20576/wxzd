@@ -19,18 +19,6 @@ router.get('/about', (req, res) => {
 router.get('/call', (req, res) => {
     res.render('call.html')
 })
-router.get('/pro1', (req, res) => {
-    res.render('pro1.html')
-})
-router.get('/pro2', (req, res) => {
-    res.render('pro2.html')
-})
-router.get('/pro3', (req, res) => {
-    res.render('pro3.html')
-})
-router.get('/pro4', (req, res) => {
-    res.render('pro4.html')
-})
 router.get('/new1', (req, res) => {
     res.render('new1.html')
 })
@@ -52,7 +40,7 @@ router.get('/equipment', (req, res) => {
 router.get('/fwal', (req, res) => {
     res.render('fwal.html')
 })
-router.get('/:id', (req, res) => {
+router.get('/product/:id', (req, res) => {
     var id = req.params["id"];
     Pro.findById(id)
         .then(function (data1) {

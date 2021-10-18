@@ -52,7 +52,7 @@
        {{each pro}}
       {{if $value.class==1}}
         <div class="col-md-3 col-xs-6">
-          <a href="/{{$value._id.toString()}}">
+          <a href="/product/{{$value._id.toString()}}">
             <img src="{{$value.picture}}" class='img-responsive' alt="">
             <span>{{$value.name}}</span>
           </a>

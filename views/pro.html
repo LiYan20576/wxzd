@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap 101 Template</title>
-    <link rel="stylesheet" href="/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/02.css">
-      <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="../dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/02.css">
+      <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <!--[if lt IE 9]>
       <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
@@ -37,7 +37,7 @@
 
     <section class="product">
       <div class="img_big">
-        <img src="{{pro.picture}}"class=" img-responsive visible-md visible-sm visible-xs" alt="">
+        <img src="../{{pro.picture}}"class=" img-responsive visible-md visible-sm visible-xs" alt="">
       </div>
       <div class="pro_info">
         <div class="detail_tit">{{pro.name}}</div>
@@ -46,7 +46,7 @@
         </div>
       </div>
       <div class="img_small">
-        <img src="{{pro.picture}}" class="hidden-md hidden-sm hidden-xs"alt="">
+        <img src="../{{pro.picture}}" class="hidden-md hidden-sm hidden-xs"alt="">
       </div>
       <div class="pro_tedian">
         <div class="tedian_con">
@@ -63,7 +63,7 @@
           {{each about}}
           <div class="col-lg-4 col-md-6 col-xs-6">
             <a href="/{{$value._id.toString()}}">
-              <img src="{{$value.picture}}"class='img-responsive' alt="">
+              <img src="../{{$value.picture}}"class='img-responsive' alt="">
               <div class="pro_info">
                 <span>{{$value.name}}</span>
               <p>{{$value.about}}</p>
