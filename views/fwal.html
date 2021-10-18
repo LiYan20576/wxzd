@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/sever.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/sever.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/dist/css/bootstrap.css">
 </head>
 
 <body>
     {{include './header.html'}}
     <div class="nybanner">
-        <img src="./img/首图.jpg" class="pc_banner">
+        <img src="/img/首图.jpg" class="pc_banner">
         <div class="kejian clearfix">
             <div class="banner_wen">服务案例</div>
         </div>
@@ -23,108 +23,50 @@
     <div class="position" style="background-color:#FFF;">
         <div class="kejian">
             <div class="position_wz">
-                <img src="./img/房子.jpg">
+                <img src="/img/房子.jpg">
                 <span>></span>
-                <a href="/">首页</a>
+                <a href="/index">首页</a>
                 <span>></span>
-                <a href="#">服务案例</a>
+                <a href="/fwal">服务案例</a>
             </div>
         </div>
     </div>
     <div class="case">
         <div class="kejian">
             <ul class="caselist clearfix">
+                {{each serve}}
                 <li>
-                    <div class="case_img"><img src="./img/天津.jpg"></div>
-                    <div class="case_con"><span>布勒天津项目</span>
-                        <p>全套不锈钢管件制作</p>
+                    <div class="case_img"><img src="{{$value.picture}}"></div>
+                    <div class="case_con"><span>{{$value.name}}</span>
+                        <p>{{$value.about}}</p>
                         <p><br /></p>
                         <p><br /></p>
                     </div>
                 </li>
-                <li>
-                    <div class="case_img"><img src="./img/山东.jpg"></div>
-                    <div class="case_con"><span>布勒山东招远项目</span>
-                        <p>碳钢风网及粉间不锈钢溜管制作</p>
-                        <p><br /></p>
-                    </div>
-                </li>
-                <li>
-                    <div class="case_img"><img src="./img/合肥.jpg"></div>
-                    <div class="case_con"><span>布勒合肥项目</span>
-                        <p>风网管件和非标件，制粉间溜管</p>
-                        <p><br /></p>
-                    </div>
-                </li>
-                <li>
-                    <div class="case_img"><img src="./img/南顺.jpg"></div>
-                    <div class="case_con"><span>金坛南顺</span>
-                        <p>550吨A线B线改造项目</p>
-                        <p><br /></p>
-                        <p><br /></p>
-                    </div>
-                </li>
-                <li>
-                    <div class="case_img"><img src="./img/新疆.jpg"></div>
-                    <div class="case_con"><span>新疆新天骏面粉</span>
-                        <p>500吨管道风网非标件、设备</p>
-                        <p><br /></p>
-                    </div>
-                </li>
-                <li>
-                    <div class="case_img"><img src="./img/商丘.jpg"></div>
-                    <div class="case_con"><span>五得利集团商丘公司</span>
-                        <p>1500吨制粉管道风网非标件和气动闸阀门</p>
-                        <p><br /></p>
-                    </div>
-                </li>
-                <li>
-                    <div class="case_img"><img src="./img/大名.jpg"></div>
-                    <div class="case_con"><span>五得利集团大名工厂</span>
-                        <p>3000吨制粉管道风网非标件和气动闸阀门</p>
-                        <p><br /></p>
-                    </div>
-                </li>
-                <li>
-                    <div class="case_img"><img src="./img/柏乡.jpg"></div>
-                    <div class="case_con"><span>河北五得利集团柏乡</span>
-                        <p>3000T面粉生产线全套溜管的仓底卸料器和气动闸阀门</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="case_img"><img src="./img/新乡.jpg"></div>
-                    <div class="case_con"><span>河北五得利新乡公司</span>
-                        <p>面粉生产线全套溜管和气动闸阀门（布勒设计）</p>
-                        <p><br /></p>
-                    </div>
-                </li>
-                <li>
-                    <div class="case_img"><img src="./img/兴化.jpg"></div>
-                    <div class="case_con"><span>河北五得利兴化公司</span>
-                        <p>2000T面粉生产线全套溜管和气动闸阀门</p>
-                        <p><br /></p>
-                    </div>
-                </li>
+                {{/each}}
             </ul>
-            <div class="text-center pager">
-                <ul class="pagination">
-                    <li class="disabled"><span>&laquo;</span></li>
-                    <li class="active"><span>1</span></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">&raquo;</a></li>
+           
+            <nav aria-label="Page navigation" class="text-center">
+                    <ul class="pagination pager">
+                        <li class="disabled"><span>&laquo;</span></li>
+                        <li class="{{page==1?"active":""}}"><a href="/fwal/1">1</a></li>
+                        <li class="{{page==2?"active":""}}"><a href="/fwal/2">2</a></li>
+                        <li class="{{page==3?"active":""}}"><a href="/fwal/3">3</a></li>
+                        <li><a href="#">&raquo;</a></li>
                 </ul>
-            </div>
+            </nav>
+           
         </div>
     </div>
     {{include './footer.html'}}
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
-    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-    crossorigin="anonymous"></script>
-  <script src="./js/header.js"></script>
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+    <script src="/js/header.js"></script>
+   
 </body>
 
 </html>

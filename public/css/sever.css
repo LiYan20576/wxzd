@@ -232,7 +232,7 @@ img {
     margin: 0;
   }
   .pager li {
-    margin: 0 .4em;
+    margin: 0 0.4em;
     display: inline-block;
   }
   .pager li:first-child > a,
@@ -255,8 +255,8 @@ img {
   .pager > .pagination > .active > span:hover,
   .pager > .pagination > .active > a:focus,
   .pager > .pagination > .active > span:focus {
-    background-color: #26938c;
-    border-color: #26938c;
+    background-color: #26938c!important;
+    border-color: #26938c!important;
   }
   @media screen and (max-width: 1200px) {
 
