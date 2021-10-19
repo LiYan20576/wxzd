@@ -59,7 +59,7 @@ router.get('/equipment', (req, res) => {
 router.get('/fwal', (req, res) => {
     Serve.find({page:'1'})
         .then(function (data) {
-            console.log(data)
+            // console.log(data)
             res.render('fwal.html', { serve: data ,page:'1'})
         })
 
