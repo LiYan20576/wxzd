@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Pro = require('../models/product')
 const Serve = require('../models/serve')
+const About = require('../models/about')
 router.get('/product', (req, res) => {
     Pro.find()
         .then(function (data) {
@@ -29,8 +30,15 @@ router.get('/product/:id', (req, res) => {
                 })
         })
 })
-router.get('/index', (req, res) => {
-    res.render('index.html')
+router.get('/index', async(req, res) => {
+    var result = await About.find()
+    res.render('index.html', { about: result })
+
+})
+router.get('/about', async(req, res) => {
+    var result = await About.find()
+
+    res.render('about.html', { about: result })
 })
 router.get('/about', (req, res) => {
     res.render('about.html')
