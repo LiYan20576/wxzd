@@ -1,0 +1,4 @@
+mongoimport -d igeek -c abouts about.txt
+mongoimport -d igeek -c pros product.txt
+mongoimport -d igeek -c serves serve.txt
+npm i express body-parser express-art-template art-template mongoose
