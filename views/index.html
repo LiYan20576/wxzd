@@ -44,19 +44,20 @@
         <div class="neirong">
             <div class="t1">了解我们的产品</div>
             <div class="t2">探索高效与智慧型粮机装备解决方案</div>
-            <div class="readmore">
-                <span>+</span>
-            </div>
             <div class="box">
-                {{each about}} {{if $value.class==6}}
+                {{each pro}} 
                 <div class="product">
                     <a>
                         <img src="{{$value.picture}}">
-                        <span>{{$value.title}}</span>
+                        <span>{{$value.name}}</span>
                     </a>
                 </div>
-                {{/if}} {{/each}}
+              {{/each}}
             </div>
+            <div class="readmore">
+                <span>+</span>
+            </div>
+            
         </div>
     </div>
     <div class="about_img"><img src="./images/about_img.jpg" class="img-responsive"></div>
@@ -164,35 +165,16 @@
     crossorigin="anonymous"></script>
   <script src="/js/header.js"></script>
   <script>
-    var index = 0;
     $('.readmore').click(function() {
-
-        if (index === 0) {
-            var neirong = $('.neirong>.box');
-            var neirongHeight = neirong.height();
-
-            neirong.height(2 * neirongHeight)
-            index = 1;
-            $('.readmore').css('bottom', '-360px')
-            $('.readmore>span').remove();
-            $('.readmore').html('<span>');
-            $('.readmore>span').append('-');
-        } else {
-            var neirong = $('.neirong>.box');
-            var neirongHeight = neirong.height();
-
-            neirong.height(0.5 * neirongHeight)
-            index = 0;
-            $('.readmore').css('bottom', '-240px')
-            $('.readmore>span').remove();
-            $('.readmore').html('<span>');
-            $('.readmore>span').append('+');
-
-
-        }
-
-
-
+        var height = $(".cp>.neirong>.box").height()
+        if(height=='182'){
+            $(".cp>.neirong>.box").animate({"height":"728px"},500);
+            $(".cp>.neirong>.readmore>span").html("-");
+        }else if(height=='728'){
+         
+            $(".cp>.neirong>.box").animate({"height":"182px"},500);
+            $(".cp>.neirong>.readmore>span").html("+");
+        } 
     });
 </script>
 </body>

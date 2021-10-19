@@ -32,8 +32,10 @@ router.get('/product/:id', (req, res) => {
 })
 router.get('/index', async(req, res) => {
     var result = await About.find()
-    res.render('index.html', { about: result })
-
+    Pro.find()
+    .then(function (data) {
+        res.render('index.html', { about: result,pro:data })
+    })
 })
 router.get('/about', async(req, res) => {
     var result = await About.find()
