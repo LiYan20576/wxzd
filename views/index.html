@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>首页</title>
 
-    <link rel="stylesheet" href="/bootstap定制/css/bootstrap.css" />
+    <link rel="stylesheet" href="/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/css2/reset.css" />
     <link rel="stylesheet" href="/css2/index.css" />
     <link rel="stylesheet" href="/css2/top.css" />
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/css2/head.css" />
     <link rel="stylesheet" href="/css2/cp.css" />
     <link rel="stylesheet" href="/css2/gyzd.css" />
+    <link rel="stylesheet" href="/css2/about_img.css" />
     <link rel="stylesheet" href="/css2/shebei.css" />
     <link rel="stylesheet" href="/css2/shebei2.css" />
     <link rel="stylesheet" href="/css2/news.css" />
@@ -49,60 +50,18 @@
             <div class="box">
                 {{each about}} {{if $value.class==6}}
                 <div class="product">
-                    <a href="#">
+                    <a>
                         <img src="{{$value.picture}}">
                         <span>{{$value.title}}</span>
                     </a>
                 </div>
                 {{/if}} {{/each}}
-                <!-- <div class="product">
-                    <a href="#">
-                        <img src="./images/p2.jpg">
-                        <span>装备式预测溜管</span>
-                    </a>
-                </div>
-                <div class="product">
-                    <a href="#">
-                        <img src="./images/p3.jpg">
-                        <span>直管(S)</span>
-                    </a>
-                </div>
-                <div class="product">
-                    <a href="#">
-                        <img src="./images/p4.jpg">
-                        <span>变径管(TP)</span>
-                    </a>
-                </div>
-                <div class="product">
-                    <a href="#">
-                        <img src="./images/p5.jpg">
-                        <span>小弯头</span>
-                    </a>
-                </div>
-                <div class="product">
-                    <a href="#">
-                        <img src="./images/p6.jpg">
-                        <span>可调弯头(LPW)</span>
-                    </a>
-                </div>
-                <div class="product">
-                    <a href="#">
-                        <img src="./images/p7.jpg">
-                        <span>合流管(GL)</span>
-                    </a>
-                </div>
-                <div class="product">
-                    <a href="#">
-                        <img src="./images/p8.jpg">
-                        <span>检察管(IS)</span>
-                    </a>
-                </div> -->
-
             </div>
         </div>
     </div>
+    <div class="about_img"><img src="./images/about_img.jpg" class="img-responsive"></div>
     <div class="gyzd">
-        <img src="./images/about_img.jpg" class="img-responsive">
+       
         <div class="neirong">
             <div class="leftbox">
                 关于中大
