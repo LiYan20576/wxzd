@@ -37,7 +37,7 @@
 
     <section class="product">
       <div class="img_big">
-        <img src="/{{pro.picture}}"class=" img-responsive visible-md visible-sm visible-xs" alt="">
+        <img src="{{pro.picture}}"class=" img-responsive visible-md visible-sm visible-xs" alt="">
       </div>
       <div class="pro_info">
         <div class="detail_tit">{{pro.name}}</div>
@@ -46,7 +46,7 @@
         </div>
       </div>
       <div class="img_small">
-        <img src="/{{pro.picture}}" class="hidden-md hidden-sm hidden-xs"alt="">
+        <img src="{{pro.picture}}" class="hidden-md hidden-sm hidden-xs"alt="">
       </div>
       <div class="pro_tedian">
         <div class="tedian_con">
@@ -62,8 +62,8 @@
         <div class="row">
           {{each about}}
           <div class="col-lg-4 col-md-6 col-xs-6">
-            <a href="/{{$value._id.toString()}}">
-              <img src="/{{$value.picture}}"class='img-responsive' alt="">
+            <a href="{{$value._id.toString()}}">
+              <img src="{{$value.picture}}"class='img-responsive' alt="">
               <div class="pro_info">
                 <span>{{$value.name}}</span>
               <p>{{$value.about}}</p>
